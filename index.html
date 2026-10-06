@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Who Pays for Data Center Power: Large-Load Tariffs in Five States</title>
+<meta name="description" content="How Pennsylvania, Virginia, Ohio, Maryland, and Georgia set the terms data centers and other large electricity customers must accept: size thresholds, minimum bills, contract terms, exit fees, and collateral. Current as of October 2026.">
+<meta property="og:title" content="Who Pays for Data Center Power: Large-Load Tariffs in Five States">
+<meta property="og:description" content="How five states set the terms large electricity customers must accept: thresholds, minimum bills, contract terms, exit fees, and collateral.">
+<meta property="og:image" content="https://jphoebus.github.io/large-load-tariffs/tariffs-preview.png">
+<meta property="og:url" content="https://jphoebus.github.io/large-load-tariffs/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --limestone: #EDF0F1;
+    --paper: #FFFFFF;
+    --ink: #1B2631;
+    --slate: #52606D;
+    --rule: #CBD2D9;
+    --accent: #1F5C4A;
+    --accent-soft: #DCEBE5;
+    --font: "Public Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--limestone);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  .measure { max-width: 68ch; }
+
+  /* Header */
+  header { padding: 64px 0 40px; }
+  h1 {
+    font-size: clamp(2rem, 4.6vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0 0 20px;
+    max-width: 18ch;
+  }
+  .lede { font-size: 1.15rem; color: var(--slate); margin: 0; }
+
+  /* Where each state stands */
+  .standing {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-top: 3px solid var(--ink);
+    margin-top: 40px;
+  }
+  .standing div {
+    padding: 16px 16px 20px 0;
+    border-right: 1px solid var(--rule);
+    padding-left: 16px;
+  }
+  .standing div:first-child { padding-left: 0; }
+  .standing div:last-child { border-right: 0; }
+  .standing strong { display: block; font-size: 1.25rem; font-weight: 700; }
+  .standing span { display: block; color: var(--slate); font-size: 0.95rem; }
+  .standing time { display: block; font-size: 0.85rem; color: var(--accent); font-weight: 600; margin-top: 6px; }
+
+  /* Comparison */
+  section { padding: 48px 0; }
+  h2 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.01em; margin: 0 0 12px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 20px; align-items: center; }
+  .filters p { margin: 0 8px 0 0; color: var(--slate); font-size: 0.95rem; }
+  .chip {
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border: 1.5px solid var(--accent);
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+  }
+  .chip[aria-pressed="false"] { background: transparent; color: var(--accent); }
+  .table-scroll {
+    overflow-x: auto;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+  }
+  table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 0.92rem; }
+  th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--rule); }
+  thead th {
+    font-size: 1rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--ink);
+    position: sticky;
+    top: 0;
+    background: var(--paper);
+  }
+  tbody th {
+    font-weight: 600;
+    color: var(--slate);
+    width: 170px;
+    position: sticky;
+    left: 0;
+    background: var(--paper);
+  }
+  tr.group th {
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  [hidden] { display: none !important; }
+  td.empty { color: var(--slate); font-style: italic; }
+  td.sources a { display: block; word-break: break-word; margin-bottom: 4px; }
+  .status-msg { padding: 24px; color: var(--slate); }
+
+  /* Analysis */
+  .analysis { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .analysis h3 { font-size: 1.1rem; font-weight: 700; margin: 24px 0 4px; }
+  .analysis p { margin: 0; }
+  .question {
+    margin-top: 32px;
+    padding-left: 20px;
+    border-left: 4px solid var(--accent);
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  ul.watch { padding-left: 1.1em; margin: 12px 0 0; }
+  ul.watch li { margin-bottom: 10px; }
+
+  footer { border-top: 1px solid var(--rule); padding: 40px 0 64px; color: var(--slate); font-size: 0.95rem; }
+  footer p { margin: 0 0 12px; }
+
+  @media (max-width: 800px) {
+    .standing { grid-template-columns: 1fr 1fr; }
+    .standing div { border-right: 0; border-bottom: 1px solid var(--rule); padding-left: 0; }
+    .analysis { grid-template-columns: 1fr; gap: 16px; }
+    header { padding-top: 40px; }
+  }
+  @media print {
+    .filters { display: none; }
+    body { background: #fff; }
+    .table-scroll { overflow: visible; border: 0; }
+    thead th, tbody th { position: static; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>Who pays for data center power</h1>
+    <p class="lede measure">How Pennsylvania, Virginia, Ohio, Maryland, and Georgia set the terms that data centers and other large electricity customers must accept: size thresholds, minimum bills, contract terms, exit fees, and collateral. Current as of October 2026.</p>
+    <p class="lede measure" style="margin-top:12px">Companion to <a href="https://jphoebus.github.io/state-incentive-comparison/">State data center incentives, compared</a>, which covers the tax side. This comparison covers the electricity side: who carries the cost of the grid built to serve large loads.</p>
+
+    <div class="standing" aria-label="How each state sets large-load terms">
+      <div><strong>Pennsylvania</strong><span>Voluntary model tariff at 50 MW</span><time datetime="2026-05-12">May 12, 2026</time></div>
+      <div><strong>Virginia</strong><span>New rate class at 25 MW</span><time datetime="2027-01-01">Takes effect Jan. 1, 2027</time></div>
+      <div><strong>Ohio</strong><span>One utility's tariff at 25 MW, under appeal</span><time datetime="2025-07-23">In effect since July 2025</time></div>
+      <div><strong>Maryland</strong><span>Statute sets 25 MW; tariffs pending</span><time datetime="2026-10-23">Hearings begin Oct. 23</time></div>
+      <div><strong>Georgia</strong><span>Custom contracts at 100 MW</span><time datetime="2025-02-01">In effect since Feb. 2025</time></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="comparison">
+    <div class="wrap">
+      <h2>Side-by-side comparison</h2>
+      <p class="measure">Choose which states to compare. On a phone, scroll the table sideways.</p>
+      <div class="filters" id="filters" role="group" aria-label="States to compare"><p>Showing:</p><button class="chip" type="button" aria-pressed="true" data-state="pennsylvania">Pennsylvania</button><button class="chip" type="button" aria-pressed="true" data-state="virginia">Virginia</button><button class="chip" type="button" aria-pressed="true" data-state="ohio">Ohio</button><button class="chip" type="button" aria-pressed="true" data-state="maryland">Maryland</button><button class="chip" type="button" aria-pressed="true" data-state="georgia">Georgia</button></div>
+      <div class="table-scroll" tabindex="0" aria-label="Comparison table">
+        <table id="table">
+<thead><tr><th scope="col"></th>
+<th scope="col" data-state="pennsylvania">Pennsylvania</th>
+<th scope="col" data-state="virginia">Virginia</th>
+<th scope="col" data-state="ohio">Ohio</th>
+<th scope="col" data-state="maryland">Maryland</th>
+<th scope="col" data-state="georgia">Georgia</th>
+</tr></thead><tbody>
+<tr class="group"><th colspan="6" scope="colgroup">Who sets the terms</th></tr>
+<tr><th scope="row">Regulator</th>
+<td data-state="pennsylvania">Pennsylvania Public Utility Commission</td>
+<td data-state="virginia">State Corporation Commission</td>
+<td data-state="ohio">Public Utilities Commission of Ohio</td>
+<td data-state="maryland">Maryland Public Service Commission</td>
+<td data-state="georgia">Georgia Public Service Commission</td>
+</tr>
+<tr><th scope="row">Mechanism</th>
+<td data-state="pennsylvania">Voluntary model tariff; each utility adopts it through its own tariff filing</td>
+<td data-state="virginia">New GS-5 rate class in Dominion Energy Virginia&#x27;s rates</td>
+<td data-state="ohio">Data center tariff for one utility, approved as a settlement</td>
+<td data-state="maryland">Statute requires large-load tariffs; utility tariffs pending before the PSC</td>
+<td data-state="georgia">PSC rule allowing customized contracts for Georgia Power&#x27;s largest customers</td>
+</tr>
+<tr><th scope="row">Utilities covered</th>
+<td data-state="pennsylvania">All electric distribution companies, as guidance</td>
+<td data-state="virginia">Dominion Energy Virginia</td>
+<td data-state="ohio">AEP Ohio</td>
+<td data-state="maryland">BGE, Delmarva Power, and Pepco filed jointly; the statute also covers Potomac Edison</td>
+<td data-state="georgia">Georgia Power</td>
+</tr>
+<tr><th scope="row">Decision and date</th>
+<td data-state="pennsylvania">Final order May 12, 2026 (Docket M-2025-3054271)</td>
+<td data-state="virginia">Final order Nov. 25, 2025 (Case PUR-2025-00058); effective Jan. 1, 2027</td>
+<td data-state="ohio">Order July 9, 2025 (Case 24-508-EL-ATA); effective July 23, 2025</td>
+<td data-state="maryland">Utility RELIEF Act (HB 1532), enacted May 12, 2026; utility tariff filed Sept. 29, 2026</td>
+<td data-state="georgia">Rule approved Jan. 23, 2025; effective Feb. 1, 2025</td>
+</tr>
+<tr class="group"><th colspan="6" scope="colgroup">Who it applies to</th></tr>
+<tr><th scope="row">Size threshold</th>
+<td data-state="pennsylvania">Over 50 MW individually or 100 MW in aggregate; utilities may apply it below 50 MW</td>
+<td data-state="virginia">25 MW or more</td>
+<td data-state="ohio">New or expanded data center load over 25 MW; mobile data centers over 1 MW</td>
+<td data-state="maryland">25 MW aggregate monthly demand (lowered from 100 MW)</td>
+<td data-state="georgia">100 MW or more</td>
+</tr>
+<tr><th scope="row">Load factor</th>
+<td class="empty" data-state="pennsylvania">Not specified in sources reviewed</td>
+<td data-state="virginia">75% or more</td>
+<td class="empty" data-state="ohio">Not specified in sources reviewed</td>
+<td data-state="maryland">60% (lowered from 80%)</td>
+<td class="empty" data-state="georgia">Not specified in sources reviewed</td>
+</tr>
+<tr class="group"><th colspan="6" scope="colgroup">What customers commit to</th></tr>
+<tr><th scope="row">Minimum bill</th>
+<td data-state="pennsylvania">80% of contract capacity</td>
+<td data-state="virginia">85% of contracted transmission and distribution demand; 60% of contracted generation demand</td>
+<td data-state="ohio">Up to 85% of contract capacity, on a sliding scale by size</td>
+<td class="empty" data-state="maryland">Pending PSC decision</td>
+<td data-state="georgia">Allowed; set contract by contract</td>
+</tr>
+<tr><th scope="row">Contract term</th>
+<td data-state="pennsylvania">Load ramp period plus a minimum initial term of 5 years</td>
+<td data-state="virginia">14 years</td>
+<td data-state="ohio">12 years, including the load ramp</td>
+<td class="empty" data-state="maryland">Pending PSC decision</td>
+<td data-state="georgia">Up to 15 years under the rule (previously 5); Georgia Power testified its contracts run 15 years or longer</td>
+</tr>
+<tr><th scope="row">Load ramp</th>
+<td data-state="pennsylvania">Load ramp schedule set in the contract</td>
+<td data-state="virginia">Up to 4 years, adding at least 20% of contracted demand each year</td>
+<td data-state="ohio">4 years</td>
+<td class="empty" data-state="maryland">Pending PSC decision</td>
+<td data-state="georgia">Set in each contract</td>
+</tr>
+<tr><th scope="row">Exit terms</th>
+<td data-state="pennsylvania">48 months&#x27; notice for termination or major capacity reduction</td>
+<td data-state="virginia">Exit fees to recover remaining contract costs on early termination</td>
+<td data-state="ohio">Exit fee equal to three years of minimum charges, or three years&#x27; notice after the initial period</td>
+<td class="empty" data-state="maryland">Pending PSC decision</td>
+<td data-state="georgia">Early termination penalties set in each contract</td>
+</tr>
+<tr><th scope="row">Collateral</th>
+<td data-state="pennsylvania">Enough to cover network improvement and interconnection facilities costs; reduced or refunded as milestones are met</td>
+<td data-state="virginia">Customers without sufficient credit may have to guarantee up to 60% of minimum charges over the contract term</td>
+<td data-state="ohio">Customers below set credit standards post collateral equal to 50% of total minimum charges; surety bonds not accepted</td>
+<td class="empty" data-state="maryland">Pending PSC decision</td>
+<td data-state="georgia">Letters of credit or other collateral, per Georgia Power testimony</td>
+</tr>
+<tr class="group"><th colspan="6" scope="colgroup">Costs and oversight</th></tr>
+<tr><th scope="row">Costs assigned</th>
+<td data-state="pennsylvania">Interconnection and infrastructure costs of serving the customer</td>
+<td data-state="virginia">Transmission, distribution, and generation, through minimum charges</td>
+<td data-state="ohio">Subscribed capacity, regardless of actual use</td>
+<td data-state="maryland">The PSC is directed to consider cost-allocation approaches for large-load customers</td>
+<td data-state="georgia">Upstream generation, transmission, and distribution costs, plus site-specific costs</td>
+</tr>
+<tr><th scope="row">Regulator review</th>
+<td data-state="pennsylvania">PUC reviews each utility&#x27;s tariff filing</td>
+<td data-state="virginia">Terms set in the utility&#x27;s rate case</td>
+<td data-state="ohio">Approved by PUCO as a tariff</td>
+<td data-state="maryland">PSC hearings Oct. 23 and Dec. 8-11, 2026</td>
+<td data-state="georgia">Contracts filed with the PSC at least 30 days before signing; quarterly reports on new large loads</td>
+</tr>
+<tr class="group"><th colspan="6" scope="colgroup">Status and sources</th></tr>
+<tr><th scope="row">2026 status</th>
+<td data-state="pennsylvania">Model adopted; utilities adopting through their own filings. HB 2828, which cleared the House Energy Committee in September 2026, would require utilities to adopt it</td>
+<td data-state="virginia">Approved; takes effect Jan. 1, 2027. In August 2026, the SCC ordered Dominion to develop a tariff assigning more transmission costs to data centers</td>
+<td data-state="ohio">In effect; Ohio Manufacturers&#x27; Association appeal pending at the Ohio Supreme Court. Substitute HB 646 would create a statewide data center rate class</td>
+<td data-state="maryland">Statute in effect; tariff terms pending</td>
+<td data-state="georgia">In effect; Public Service Commission elections Nov. 3, 2026</td>
+</tr>
+<tr><th scope="row">Still to verify</th>
+<td class="empty" data-state="pennsylvania">Nothing outstanding</td>
+<td class="empty" data-state="virginia">Nothing outstanding</td>
+<td class="empty" data-state="ohio">Nothing outstanding</td>
+<td data-state="maryland">Terms proposed in the Sept. 29 utility filing; whether Potomac Edison has filed</td>
+<td data-state="georgia">Early termination terms in practice</td>
+</tr>
+<tr><th scope="row">Sources</th>
+<td class="sources" data-state="pennsylvania"><a href="https://www.puc.pa.gov/press-release/2026/puc-releases-final-order-establishing-first-of-its-kind-large-load-model-tariff-framework-05132026" rel="noopener">puc.pa.gov</a><a href="https://www.puc.pa.gov/pcdocs/1929842.pdf" rel="noopener">puc.pa.gov</a><a href="https://www.womblebonddickinson.com/us/insights/energy/102n50v/pennsylvanias-large-load-model-tariff-offers-a-road-map-for-north-carolina" rel="noopener">womblebonddickinson.com</a></td>
+<td class="sources" data-state="virginia"><a href="https://www.scc.virginia.gov/about-the-scc/newsreleases/release/scc-issues-order-on-dev-biennial-review-2025/scc-rules-in-dev-biennial-review-case.html" rel="noopener">scc.virginia.gov</a><a href="https://www.scc.virginia.gov/media/sccvirginiagov-home/about-the-scc/fact-sheets/scc-data-center-initiatives-02-2026.pdf" rel="noopener">scc.virginia.gov</a><a href="https://virginiamercury.com/2026/08/05/scc-orders-dominion-to-develop-tariff-to-assign-more-transmission-costs-to-data-centers/" rel="noopener">virginiamercury.com</a></td>
+<td class="sources" data-state="ohio"><a href="https://www.aepohio.com/company/about/rates/data-center-tariff/" rel="noopener">aepohio.com</a><a href="https://www.powermag.com/regulator-approves-aep-ohios-landmark-data-center-tariff/" rel="noopener">powermag.com</a><a href="https://ohiocapitaljournal.com/2025/11/13/ohio-manufacturers-association-challenges-new-utility-billing-for-data-centers/" rel="noopener">ohiocapitaljournal.com</a></td>
+<td class="sources" data-state="maryland"><a href="https://www.utilitydive.com/news/maryland-legislature-utility-rate-relief-act-exelon-firstenergy/817431/" rel="noopener">utilitydive.com</a><a href="https://www.gfrlaw.com/what-we-do/insights/relief-act-2026" rel="noopener">gfrlaw.com</a><a href="https://dailyenergyinsider.com/news/53956-bge-delmarva-power-pepco-file-large-load-tariff-in-maryland/" rel="noopener">dailyenergyinsider.com</a><a href="https://chestertownspy.org/2026/09/30/bge-delmarva-power-and-pepco-propose-plan-to-protect-maryland-customers-from-large-energy-user-cost-shifts/" rel="noopener">chestertownspy.org</a></td>
+<td class="sources" data-state="georgia"><a href="https://www.datacenterdynamics.com/en/news/georgia-psc-approves-new-billing-rules-for-data-centers-and-large-load-customers/" rel="noopener">datacenterdynamics.com</a><a href="https://www.govtech.com/products/georgia-approves-new-rule-to-charge-data-centers-for-power" rel="noopener">govtech.com</a><a href="https://computelaw.blog/power/georgia-power-psc-data-center-rules/" rel="noopener">computelaw.blog</a><a href="https://cleanenergy.org/news/will-the-new-openai-data-center-raise-georgia-power-bills/" rel="noopener">cleanenergy.org</a></td>
+</tr>
+<tr><th scope="row">Last updated</th>
+<td data-state="pennsylvania">2026-10-06</td>
+<td data-state="virginia">2026-10-06</td>
+<td data-state="ohio">2026-10-06</td>
+<td data-state="maryland">2026-10-06</td>
+<td data-state="georgia">2026-10-06</td>
+</tr>
+</tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="analysis">
+    <div class="wrap">
+      <div class="analysis">
+        <div>
+          <h2>What stands out</h2>
+          <h3>Five states, five ways of setting terms</h3>
+          <p>Virginia created a rate class in a utility rate case. Ohio approved one utility's tariff as a settlement. Pennsylvania issued a voluntary model for each utility to adopt. Maryland set the threshold by statute and left the terms to pending tariff cases. Georgia allows custom contracts, each reviewed by the commission before signing.</p>
+          <h3>Where terms are written, they look alike</h3>
+          <p>Minimum bills cluster at 80 to 85 percent of contracted demand, with Virginia setting 60 percent for generation. Contracts run 12 to 15 years, and collateral for customers without strong credit runs about half of minimum charges. Pennsylvania's model is the outlier on length, with a five-year minimum after the ramp period and 48 months' notice to exit.</p>
+          <h3>Thresholds vary more than terms</h3>
+          <p>Virginia, Ohio, and Maryland start at 25 MW. Pennsylvania starts at 50 MW individually or 100 MW in aggregate, and Georgia at 100 MW. The same project can fall under very different rules depending on where it is built.</p>
+          <h3>Legislatures are moving into space regulators built</h3>
+          <p>Pennsylvania's HB 2828 would require utilities to adopt the commission's model. Maryland's statute already sets the threshold. Ohio's Substitute HB 646 would create a statewide data center rate class, and a Georgia Senate committee heard testimony this year on a bill to codify the commission's protections.</p>
+        </div>
+        <div>
+          <h2>What to watch</h2>
+          <ul class="watch">
+            <li>October 23 and December 8-11, 2026: Maryland PSC hearings on the BGE, Delmarva Power, and Pepco large-load tariff.</li>
+            <li>Fall 2026: Pennsylvania's HB 2828 awaits a House floor vote.</li>
+            <li>November 3, 2026: Georgia Public Service Commission elections.</li>
+            <li>After November 3, 2026: Ohio's Substitute HB 646 is expected to return; the Ohio Supreme Court appeal of AEP Ohio's tariff is pending.</li>
+            <li>January 1, 2027: Virginia's GS-5 rate class takes effect, with a separate transmission cost tariff still in development.</li>
+          </ul>
+          <p class="question">The question I expect to shape the next round: whether large-load terms stay with regulators, set utility by utility, or move into statute, trading flexibility for uniformity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap measure">
+    <p>Compiled by Joshua Phoebus, former Director of Performance and Transformation in the Office of Pennsylvania Governor Tom Wolf. <a href="https://www.linkedin.com/in/joshuaphoebus">LinkedIn</a> · <a href="https://www.joshuaphoebusllc.com">Website</a></p>
+    <p>Related: <a href="https://jphoebus.github.io/data-center-legislation-2026/">What states changed on data centers in 2026</a> · <a href="https://jphoebus.github.io/state-incentive-comparison/">State data center incentives, compared</a> · <a href="https://jphoebus.github.io/data-center-exempt-equipment/">What counts as exempt data center equipment</a> · <a href="https://jphoebus.github.io/tax-incentive-evaluation/">How states check their tax incentives</a> · <a href="https://jphoebus.github.io/spark-grid-tracker/">DOE's SPARK grid selections, tracked</a></p>
+    <p>Each state's sources are listed in the table. Where a detail could not be confirmed or is still pending, the table says so. The underlying data is in <a href="large-load-tariffs.csv">large-load-tariffs.csv</a>. This comparison is for policy analysis and is not legal or regulatory advice.</p>
+  </div>
+</footer>
+
+<script>
+  // Each state button shows or hides that state's column. The table itself is plain HTML,
+  // so it displays even if this script never runs.
+  document.querySelectorAll("#filters .chip").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var on = b.getAttribute("aria-pressed") === "true";
+      b.setAttribute("aria-pressed", on ? "false" : "true");
+      document.querySelectorAll('#table [data-state="' + b.dataset.state + '"]').forEach(function (c) { c.hidden = on; });
+    });
+  });
+</script>
+</body>
+</html>
