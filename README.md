@@ -36,6 +36,7 @@ The full comparison is in [large-load-tariffs.csv](large-load-tariffs.csv), with
 - [What counts as exempt data center equipment](https://jphoebus.github.io/data-center-exempt-equipment/)
 - [How states check their tax incentives](https://jphoebus.github.io/tax-incentive-evaluation/)
 - [DOE's SPARK grid selections, tracked](https://jphoebus.github.io/spark-grid-tracker/)
+- [Are state rules ready for quantum computing?](https://jphoebus.github.io/quantum-readiness/)
 
 ## About me
 
