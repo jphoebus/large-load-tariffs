@@ -1,6 +1,6 @@
 # Who Pays for Data Center Power: Large-Load Tariffs in Five States
 
-How Pennsylvania, Virginia, Ohio, Maryland, and Georgia set the terms that data centers and other large electricity customers must accept: size thresholds, minimum bills, contract terms, exit fees, and collateral. Current as of October 2026.
+How Pennsylvania, Virginia, Ohio, Maryland, and Georgia set the terms that data centers and other large electricity customers must accept: size thresholds, minimum bills, contract terms, exit fees, and collateral. Current as of October 8, 2026.
 
 **Interactive version:** [jphoebus.github.io/large-load-tariffs](https://jphoebus.github.io/large-load-tariffs/)
 
