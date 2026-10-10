@@ -4,6 +4,8 @@ How Pennsylvania, Virginia, Ohio, Maryland, and Georgia set the terms that data 
 
 **Interactive version:** [jphoebus.github.io/large-load-tariffs](https://jphoebus.github.io/large-load-tariffs/)
 
+**All projects:** [jphoebus.github.io](https://jphoebus.github.io/)
+
 ## Why this comparison
 
 When a data center connects to the grid, utilities often build new transmission, distribution, and generation to serve it. Large-load tariffs decide who carries that cost if the project grows more slowly than planned, shrinks, or leaves. This comparison looks at how five states answer that question, and who in each state sets the terms. It is a companion to [State data center incentives, compared](https://jphoebus.github.io/state-incentive-comparison/), which covers the tax side.
