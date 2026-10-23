@@ -23,7 +23,7 @@ When a data center connects to the grid, utilities often build new transmission,
 - Fall 2026: Pennsylvania's HB 2828 awaits a House floor vote.
 - November 3, 2026: Georgia Public Service Commission elections.
 - After November 3, 2026: Ohio's Substitute HB 646 is expected to return; the Ohio Supreme Court appeal of AEP Ohio's tariff is pending.
-- November 17, 2026: the SCC's evidentiary hearing on NextEra's proposed acquisition of Dominion Energy; a decision is due by January 11, 2027. SCC staff testimony filed October 19 recommends denial unless the companies accept binding conditions, and supports a residential bill credit that data centers would not receive. Gov. Spanberger's filing asks the SCC to shift costs from residential customers to other customer classes.
+- November 5, 2026: public testimony begins on NextEra's proposed acquisition of Dominion Energy, followed by the SCC's evidentiary hearing November 17 and a decision due by January 11, 2027. On October 19, SCC staff recommended denial unless the companies accept binding conditions, and supported a residential bill credit that data centers would not receive. The same day, Gov. Spanberger's testimony asked for a six-year residential base-rate freeze, $29 monthly bill credits for four years, and stronger protections against data center costs being passed to households, including a separate company to build clean energy for large data centers.
 - January 1, 2027: Virginia's GS-5 rate class takes effect, with a separate transmission cost tariff still in development.
 - January 28, 2027: PUC final vote targeted on emergency curtailment rules for large loads (as reported).
 
