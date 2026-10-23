@@ -1,6 +1,6 @@
 # Who Pays for Data Center Power: Large-Load Tariffs in Five States
 
-How Pennsylvania, Virginia, Ohio, Maryland, and Georgia set the terms that data centers and other large electricity customers must accept: size thresholds, minimum bills, contract terms, exit fees, and collateral. Current as of October 21, 2026.
+How Pennsylvania, Virginia, Ohio, Maryland, and Georgia set the terms that data centers and other large electricity customers must accept: size thresholds, minimum bills, contract terms, exit fees, and collateral. Current as of October 23, 2026.
 
 **Interactive version:** [jphoebus.github.io/large-load-tariffs](https://jphoebus.github.io/large-load-tariffs/)
 
@@ -23,7 +23,7 @@ When a data center connects to the grid, utilities often build new transmission,
 - Fall 2026: Pennsylvania's HB 2828 awaits a House floor vote.
 - November 3, 2026: Georgia Public Service Commission elections.
 - After November 3, 2026: Ohio's Substitute HB 646 is expected to return; the Ohio Supreme Court appeal of AEP Ohio's tariff is pending.
-- November 17, 2026: the SCC's evidentiary hearing on NextEra's proposed acquisition of Dominion Energy. The companies' September 14 Virginia benefits package includes commitments on data center cost allocation.
+- November 17, 2026: the SCC's evidentiary hearing on NextEra's proposed acquisition of Dominion Energy; a decision is due by January 11, 2027. SCC staff testimony filed October 19 recommends denial unless the companies accept binding conditions, and supports a residential bill credit that data centers would not receive. Gov. Spanberger's filing asks the SCC to shift costs from residential customers to other customer classes.
 - January 1, 2027: Virginia's GS-5 rate class takes effect, with a separate transmission cost tariff still in development.
 - January 28, 2027: PUC final vote targeted on emergency curtailment rules for large loads (as reported).
 
