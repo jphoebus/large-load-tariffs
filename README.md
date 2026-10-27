@@ -1,6 +1,6 @@
 # Who Pays for Data Center Power: Large-Load Tariffs in Five States
 
-How Pennsylvania, Virginia, Ohio, Maryland, and Georgia set the terms that data centers and other large electricity customers must accept: size thresholds, minimum bills, contract terms, exit fees, and collateral. Current as of October 25, 2026.
+How Pennsylvania, Virginia, Ohio, Maryland, and Georgia set the terms that data centers and other large electricity customers must accept: size thresholds, minimum bills, contract terms, exit fees, and collateral. Current as of October 26, 2026.
 
 **Interactive version:** [jphoebus.github.io/large-load-tariffs](https://jphoebus.github.io/large-load-tariffs/)
 
@@ -19,11 +19,11 @@ When a data center connects to the grid, utilities often build new transmission,
 
 ## What to watch
 
-- October 23 and December 8-11, 2026: Maryland PSC hearings on the BGE, Delmarva Power, and Pepco large-load tariff.
 - Fall 2026: Pennsylvania's HB 2828 awaits a House floor vote.
 - November 3, 2026: Georgia Public Service Commission elections.
 - After November 3, 2026: Ohio's Substitute HB 646 is expected to return; the Ohio Supreme Court appeal of AEP Ohio's tariff is pending.
 - November 5, 2026: public testimony begins on NextEra's proposed acquisition of Dominion Energy, followed by the SCC's evidentiary hearing November 17 and a decision due by January 11, 2027. On October 19, SCC staff recommended denial unless the companies accept binding conditions, and supported a residential bill credit that data centers would not receive. The same day, Gov. Spanberger's testimony asked for a six-year residential base-rate freeze, $29 monthly bill credits for four years, and stronger protections against data center costs being passed to households, including a separate company to build clean energy for large data centers.
+- December 8-11, 2026: Maryland PSC hearings on the BGE, Delmarva Power, and Pepco large-load tariff.
 - January 1, 2027: Virginia's GS-5 rate class takes effect, with a separate transmission cost tariff still in development.
 - January 28, 2027: PUC final vote targeted on emergency curtailment rules for large loads (as reported).
 
