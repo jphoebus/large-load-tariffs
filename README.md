@@ -19,10 +19,10 @@ When a data center connects to the grid, utilities often build new transmission,
 
 ## What to watch
 
-- Fall 2026: Pennsylvania's HB 2828 awaits a House floor vote.
 - After November 3, 2026: Ohio's Substitute HB 646 is expected to return; the Ohio Supreme Court appeal of AEP Ohio's tariff is pending.
 - November 5, 2026: public testimony begins on NextEra's proposed acquisition of Dominion Energy, followed by the SCC's evidentiary hearing November 17 and a decision due by January 11, 2027. On October 19, SCC staff recommended denial unless the companies accept binding conditions, and supported a residential bill credit that data centers would not receive. The same day, Gov. Spanberger's testimony asked for a six-year residential base-rate freeze, $29 monthly bill credits for four years, and stronger protections against data center costs being passed to households, including a separate company to build clean energy for large data centers.
 - December 8-11, 2026: Maryland PSC hearings on the BGE, Delmarva Power, and Pepco large-load tariff.
+- January 2027: Pennsylvania’s new legislative session begins; 2025–26 data center bills would need to be reintroduced.
 - January 1, 2027: Virginia's GS-5 rate class takes effect, with a separate transmission cost tariff still in development.
 - January 28, 2027: PUC final vote targeted on emergency curtailment rules for large loads (as reported).
 - March 1-28, 2027: PJM's proposed bid window for its reliability backstop procurement. Under PJM's Oct. 29, 2026 amended filing, costs would be assigned to each zone based on its share of firm large-load growth reported by electric distribution companies; how those charges reach retail customers is a state question. Details on the [screening page](https://jphoebus.github.io/large-load-screening/). Source: [PJM Inside Lines](https://insidelines.pjm.com/pjm-files-amended-reliability-backstop-proposal/).
