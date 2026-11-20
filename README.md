@@ -1,6 +1,6 @@
 # Who Pays for Data Center Power: Large-Load Tariffs in Five States
 
-How Pennsylvania, Virginia, Ohio, Maryland, and Georgia set the terms that data centers and other large electricity customers must accept: size thresholds, minimum bills, contract terms, exit fees, and collateral. Current as of November 11, 2026.
+How Pennsylvania, Virginia, Ohio, Maryland, and Georgia set the terms that data centers and other large electricity customers must accept: size thresholds, minimum bills, contract terms, exit fees, and collateral. Current as of November 20, 2026.
 
 **Interactive version:** [jphoebus.github.io/large-load-tariffs](https://jphoebus.github.io/large-load-tariffs/)
 
@@ -22,12 +22,12 @@ When a data center connects to the grid, utilities often build new transmission,
 - Fall 2026: Pennsylvania's HB 2828 awaits a House floor vote.
 - After November 3, 2026: Ohio's Substitute HB 646 is expected to return; the Ohio Supreme Court appeal of AEP Ohio's tariff is pending.
 - November 5, 2026: public testimony begins on NextEra's proposed acquisition of Dominion Energy, followed by the SCC's evidentiary hearing November 17 and a decision due by January 11, 2027. On October 19, SCC staff recommended denial unless the companies accept binding conditions, and supported a residential bill credit that data centers would not receive. The same day, Gov. Spanberger's testimony asked for a six-year residential base-rate freeze, $29 monthly bill credits for four years, and stronger protections against data center costs being passed to households, including a separate company to build clean energy for large data centers.
-- November 17, 2026: Pennsylvania PUC technical conference on cost allocation for large computational loads, including capacity costs from PJM's reliability backstop procurement (Docket M-2026-3065062) (as reported).
 - December 8-11, 2026: Maryland PSC hearings on the BGE, Delmarva Power, and Pepco large-load tariff.
 - January 1, 2027: Virginia's GS-5 rate class takes effect, with a separate transmission cost tariff still in development.
 - January 28, 2027: PUC final vote targeted on emergency curtailment rules for large loads (as reported).
 - March 1-28, 2027: PJM's proposed bid window for its reliability backstop procurement. Under PJM's Oct. 29, 2026 amended filing, costs would be assigned to each zone based on its share of firm large-load growth reported by electric distribution companies; how those charges reach retail customers is a state question. Details on the [screening page](https://jphoebus.github.io/large-load-screening/). Source: [PJM Inside Lines](https://insidelines.pjm.com/pjm-files-amended-reliability-backstop-proposal/).
 - Federal: whether the Senate passes the Bipartisan American Affordability and Jobs Act (H.R. 2347 as the vehicle), which it voted 73–25 to begin debating on Nov. 9, 2026. As introduced, Section 2107 would require transmission service for computational loads to cover both embedded and incremental costs, require loads of 20 MW or more to pay the full incremental cost of service with financial assurances, and confirm states' authority to set separate rates or require new generation (as reported). Sources: [KAKE](https://www.kake.com/news/senate-votes-73-25-to-advance-permitting-reform-bill-with-provisions-addressing-data-centers/article_0d34b4e2-4b07-46c5-aac9-1bcf0ed492d3.html); [McGuireWoods](https://www.mcguirewoods.com/client-resources/alerts/2026/10/bipartisan-american-affordability-and-jobs-act-of-2026-proposes-sweeping-reform-for-energy-and-infrastructure-projects/).
+- Pending: PA PUC technical conference on large computational load cost allocation, postponed Oct. 28, 2026; new date to be set.
 
 The question I expect to shape the next round: whether large-load terms stay with regulators, set utility by utility, or move into statute, trading flexibility for uniformity.
 
